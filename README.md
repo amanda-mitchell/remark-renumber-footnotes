@@ -28,16 +28,16 @@ This is a document[^2] with[^2] a couple[^1] of^[inline] footnotes[^foo].
 [^foo]: Last item
 
 [^2]:	First
-	`;
+`;
 
-  const processor = unified()
-    .use(markdown)
-    .use(footnotes, { inlineNotes: true })
-    .use(renumberFootnotes)
-    .use(html)
-    .freeze();
+const processor = unified()
+	.use(markdown)
+	.use(footnotes, { inlineNotes: true })
+	.use(renumberFootnotes)
+	.use(html)
+	.freeze();
 
-  processor.process(doc).then({ contents } => console.log(contents))
+processor.process(doc).then({ contents } => console.log(contents))
 ```
 
 When run, this script will print

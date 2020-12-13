@@ -1,0 +1,22 @@
+{
+  "name": "@amanda-mitchell/remark-renumber-footnotes",
+  "version": "1.0.0",
+  "description": "A remark-parse plugin that renumbers footnotes sequentially.",
+  "main": "index.js",
+  "repository": "https://github.com/amanda-mitchell/remark-renumber-footnotes",
+  "author": "Amanda Mitchell <she@mandymitchell.me>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@amanda-mitchell/node-project-scripts": "^2.23.0",
+    "jest": "^26.6.3",
+    "remark-footnotes": "^3.0.0",
+    "remark-html": "^13.0.1",
+    "remark-parse": "^9.0.0",
+    "unified": "^9.2.0",
+    "unist-builder": "^2.0.3"
+  },
+  "dependencies": {
+    "unist-util-is": "^4.0.4"
+  }
+}

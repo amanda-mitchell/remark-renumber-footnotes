@@ -25,7 +25,7 @@
     "remark-html": "^13.0.1",
     "remark-parse": "^9.0.0",
     "unified": "^9.2.0",
-    "unist-builder": "^2.0.3"
+    "unist-builder": "^3.0.0"
   },
   "dependencies": {
     "unist-util-is": "^4.0.4"

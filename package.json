@@ -28,6 +28,6 @@
     "unist-builder": "^2.0.3"
   },
   "dependencies": {
-    "unist-util-is": "^4.0.4"
+    "unist-util-is": "^5.1.0"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "extends": "@amanda-mitchell/node-project-scripts/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./lib"
+  }
+}

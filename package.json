@@ -18,6 +18,7 @@
     "mdast",
     "markdown"
   ],
+  "type": "module",
   "devDependencies": {
     "@amanda-mitchell/node-project-scripts": "^3.4.0",
     "jest": "^27.0.6",

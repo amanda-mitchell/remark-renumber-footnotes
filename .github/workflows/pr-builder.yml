@@ -19,3 +19,5 @@ jobs:
         run: yarn eslint "./**/*.{js,jsx,mjs,cjs,ts,tsx}"
       - name: Test
         run: yarn jest
+        env:
+          NODE_OPTIONS: --experimental-vm-modules

@@ -1,9 +1,9 @@
-const unified = require('unified');
-const markdown = require('remark-parse');
-var html = require('remark-html');
-const footnotes = require('remark-footnotes');
-const build = require('unist-builder');
-const { renumberFootnotes } = require('../index');
+import unified from 'unified';
+import markdown from 'remark-parse';
+import html from 'remark-html';
+import footnotes from 'remark-footnotes';
+import build from 'unist-builder';
+import { renumberFootnotes } from '../index.js';
 
 function createProcessor(options) {
   function nullCompiler() {

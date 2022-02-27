@@ -1,4 +1,4 @@
-const is = require('unist-util-is');
+import is from 'unist-util-is';
 
 const isFootnoteReference = is.convert('footnoteReference');
 const isFootnoteDefinition = is.convert('footnoteDefinition');
@@ -46,7 +46,7 @@ function applyNewIdentifiers(node, remappedIdentifiers) {
   };
 }
 
-function renumberFootnotes(options) {
+export function renumberFootnotes(options) {
   const { ignoreNonnumericFootnotes } = options || {
     ignoreNonnumericFootnotes: false,
   };
@@ -98,5 +98,3 @@ function renumberFootnotes(options) {
     return applyNewIdentifiers(tree, remappedIdentifiers);
   };
 }
-
-exports.renumberFootnotes = renumberFootnotes;

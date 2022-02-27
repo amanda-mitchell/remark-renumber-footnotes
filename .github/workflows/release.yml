@@ -13,6 +13,8 @@ jobs:
           node-version: 16
       - run: yarn --frozen-lockfile --ignore-scripts
       - run: yarn jest
+        env:
+          NODE_OPTIONS: --experimental-vm-modules
   release:
     needs: build
     runs-on: ubuntu-latest

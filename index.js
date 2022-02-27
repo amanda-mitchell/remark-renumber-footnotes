@@ -1,8 +1,8 @@
-import is from 'unist-util-is';
+import { convert } from 'unist-util-is';
 
-const isFootnoteReference = is.convert('footnoteReference');
-const isFootnoteDefinition = is.convert('footnoteDefinition');
-const isFootnote = is.convert('footnote');
+const isFootnoteReference = convert('footnoteReference');
+const isFootnoteDefinition = convert('footnoteDefinition');
+const isFootnote = convert('footnote');
 
 function findFootnoteNodes(node) {
   if (

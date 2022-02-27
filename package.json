@@ -22,7 +22,7 @@
   "devDependencies": {
     "@amanda-mitchell/node-project-scripts": "^3.4.0",
     "jest": "^27.0.6",
-    "remark-footnotes": "^3.0.0",
+    "remark-footnotes": "^4.0.1",
     "remark-html": "^13.0.1",
     "remark-parse": "^10.0.1",
     "unified": "^9.2.0",

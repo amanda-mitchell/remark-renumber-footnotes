@@ -3,9 +3,9 @@
 
 
 "@amanda-mitchell/node-project-scripts@^3.4.0":
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/@amanda-mitchell/node-project-scripts/-/node-project-scripts-3.19.0.tgz#305048c07d401ac7681dc67767722cca28b4f0eb"
-  integrity sha512-KzQBmpjZYC82bx9hDJ/Svy3WCTuG/O+zPZ8uLQvOM2CxS5c83poTrHxmGzhR6bV51jfirQ1cFrkGUR9HylpGWA==
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/@amanda-mitchell/node-project-scripts/-/node-project-scripts-3.20.0.tgz#8e57eb1936231b799b33f6c36bcdf4f6f365c679"
+  integrity sha512-vJtOFBoS/5gS0SvtcM/Bcz23ZrmxE1rIcvpEikj4EYoTxFjk+272sIXIj+mKfNekSp0rdY0K3j5NrUKIfDq7gw==
   dependencies:
     "@amanda-mitchell/semantic-release-npm-multiple" "^3.0.0"
     "@commitlint/cli" "^16.0.0"

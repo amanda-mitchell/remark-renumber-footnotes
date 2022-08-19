@@ -3,9 +3,9 @@
 
 
 "@amanda-mitchell/node-project-scripts@^3.4.0":
-  version "3.114.0"
-  resolved "https://registry.yarnpkg.com/@amanda-mitchell/node-project-scripts/-/node-project-scripts-3.114.0.tgz#9dc91155b72c349febb85a7067469ee3bff3b8dc"
-  integrity sha512-PB6l+Ko6eAjHPIPsxUDLlntMAH/ZLutH24zvfq7/no3fxKNqbHvnPTrHqA7FrgimyotsleYn91vyiw26JlZrBg==
+  version "3.115.0"
+  resolved "https://registry.yarnpkg.com/@amanda-mitchell/node-project-scripts/-/node-project-scripts-3.115.0.tgz#f56d3fde1344f4684aef33fdf4f11a9db1612fc6"
+  integrity sha512-wiOactG9TjOzsLF3+OCuKH1GLvMC05NnNZ85nenRzyJktfX77/7ZSggzJUrweCX/1oZTjkzv8ubsekjjWp9WSg==
   dependencies:
     "@amanda-mitchell/semantic-release-npm-multiple" "^3.0.0"
     "@commitlint/cli" "^17.0.0"
@@ -18,7 +18,7 @@
     husky "4.x"
     jest "^27.5.1"
     lint-staged "^13.0.0"
-    pkg-dir "^6.0.0"
+    pkg-dir "^7.0.0"
     prettier "2.7.1"
     semantic-release "^19.0.2"
     ts-jest "^27.1.3"
@@ -3601,12 +3601,12 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
-find-up@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/find-up/-/find-up-6.1.0.tgz#96009919bff6cfba2bad6ceb5520c26082ecf370"
-  integrity sha512-aBlseiBgQ1RSiF/brMW+toDud3NHJ2Hn3pgNJLmBf2+gBwwNbfhE/Lbg2wwwoHfD3qXReOvDH4hlywQCXp4/Lw==
+find-up@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-6.3.0.tgz#2abab3d3280b2dc7ac10199ef324c4e002c8c790"
+  integrity sha512-v2ZsoEuVHYy8ZIlYqwPe/39Cy+cFDzp4dXPaxNvkEuouymu+2Jbz0PxpKarJHYJTmv2HWT3O382qY8l4jMWthw==
   dependencies:
-    locate-path "^7.0.0"
+    locate-path "^7.1.0"
     path-exists "^5.0.0"
 
 find-versions@^4.0.0:
@@ -5450,10 +5450,10 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-locate-path@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-7.0.0.tgz#f0a60c8dd7ef0f737699eb9461b9567a92bc97da"
-  integrity sha512-+cg2yXqDUKfo4hsFxwa3G1cBJeA+gs1vD8FyV9/odWoUlQe/4syxHQ5DPtKjtfm6gnKbZzjCqzX03kXosvZB1w==
+locate-path@^7.1.0:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-7.1.1.tgz#8e1e5a75c7343770cef02ff93c4bf1f0aa666374"
+  integrity sha512-vJXaRMJgRVD3+cUZs3Mncj2mxpt5mP0EmNOsxRSZRMlbqjvxzDEOIUWXGmavo0ZC9+tNZCBLQ66reA11nbpHZg==
   dependencies:
     p-locate "^6.0.0"
 
@@ -6789,12 +6789,12 @@ pkg-dir@^5.0.0:
   dependencies:
     find-up "^5.0.0"
 
-pkg-dir@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-6.0.0.tgz#f78318fe7bd9f1b2915402d6b9e0b90ab45daa8d"
-  integrity sha512-x5JKouPc1VcyhD6MI5OvxjQQ2UhKVFzs6tg0wWnEszRTLdoZwh3f8aVxogsG5HXJ9eloRUzmxSdxVtGHYTyW5A==
+pkg-dir@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-7.0.0.tgz#8f0c08d6df4476756c5ff29b3282d0bab7517d11"
+  integrity sha512-Ie9z/WINcxxLp27BKOCHGde4ITq9UklYKDzVo1nhk5sqGEXU3FpkwP5GM2voTGJkGd9B3Otl+Q4uwSOeSUtOBA==
   dependencies:
-    find-up "^6.1.0"
+    find-up "^6.3.0"
 
 please-upgrade-node@^3.2.0:
   version "3.2.0"

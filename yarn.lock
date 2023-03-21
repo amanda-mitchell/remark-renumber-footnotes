@@ -3,9 +3,9 @@
 
 
 "@amanda-mitchell/node-project-scripts@^3.4.0":
-  version "3.226.0"
-  resolved "https://registry.yarnpkg.com/@amanda-mitchell/node-project-scripts/-/node-project-scripts-3.226.0.tgz#52bd4760c7b14fd68b5a2c32f680409c4d6fbb38"
-  integrity sha512-wdhX/fCi09bDM9oX1Qa7DbkebGHb1gTSsWjg3eEXbaM3Am/uAsowbnKMSbVWiq071f/U9OCBtnQkcPlQfZXp5g==
+  version "3.227.0"
+  resolved "https://registry.yarnpkg.com/@amanda-mitchell/node-project-scripts/-/node-project-scripts-3.227.0.tgz#ff3c860190667c677ed593fc9e361bc2633ac688"
+  integrity sha512-Be+nqjnq95mrlPRVVzMuD+SL1bRdVtiCNRHaK3Uhe6H0bZhoX1XUtF1d/hJZKFYKIQAp1ZCwXHSU87dx0AkSUA==
   dependencies:
     "@amanda-mitchell/semantic-release-npm-multiple" "^3.0.0"
     "@commitlint/cli" "^17.0.0"
@@ -19,7 +19,7 @@
     jest "^27.5.1"
     lint-staged "^13.0.0"
     pkg-dir "^7.0.0"
-    prettier "2.8.4"
+    prettier "2.8.5"
     semantic-release "^19.0.2"
     ts-jest "^27.1.3"
     typescript "^4.1.3"
@@ -6833,10 +6833,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier@2.8.4:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.4.tgz#34dd2595629bfbb79d344ac4a91ff948694463c3"
-  integrity sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==
+prettier@2.8.5:
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.5.tgz#3dd8ae1ebddc4f6aa419c9b64d8c8319a7e0d982"
+  integrity sha512-3gzuxrHbKUePRBB4ZeU08VNkUcqEHaUaouNt0m7LGP4Hti/NuB07C7PPTM/LkWqXoJYJn2McEo5+kxPNrtQkLQ==
 
 pretty-format@^26.0.0, pretty-format@^26.6.2:
   version "26.6.2"

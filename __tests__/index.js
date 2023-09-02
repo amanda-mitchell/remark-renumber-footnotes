@@ -45,7 +45,7 @@ it('does not modify already sequential footnotes', async () => {
       build('footnoteDefinition', { identifier: '2', label: '2' }, [
         build('paragraph', [build('text', 'Second')]),
       ]),
-    ])
+    ]),
   );
 });
 
@@ -76,7 +76,7 @@ it('renumbers out-of-order footnotes', async () => {
       build('footnoteDefinition', { identifier: '2', label: '2' }, [
         build('paragraph', [build('text', 'Second')]),
       ]),
-    ])
+    ]),
   );
 });
 
@@ -109,7 +109,7 @@ it('accounts for inline footnotes', async () => {
       build('footnoteDefinition', { identifier: '3', label: '3' }, [
         build('paragraph', [build('text', 'Second')]),
       ]),
-    ])
+    ]),
   );
 });
 
@@ -142,7 +142,7 @@ it('correctly handles multiple references to a single note', async () => {
       build('footnoteDefinition', { identifier: '2', label: '2' }, [
         build('paragraph', [build('text', 'Second')]),
       ]),
-    ])
+    ]),
   );
 });
 
@@ -178,7 +178,7 @@ it('correctly handles orphaned definitions', async () => {
       build('footnoteDefinition', { identifier: '2', label: '2' }, [
         build('paragraph', [build('text', 'Second')]),
       ]),
-    ])
+    ]),
   );
 });
 
@@ -211,7 +211,7 @@ This is a document[^2] with[^2] a couple[^1] of footnotes.
       build('footnoteDefinition', { identifier: '1', label: '1' }, [
         build('paragraph', [build('text', 'First')]),
       ]),
-    ])
+    ]),
   );
 });
 
@@ -242,7 +242,7 @@ it('number non-numeric footnotes', async () => {
       build('footnoteDefinition', { identifier: '2', label: '2' }, [
         build('paragraph', [build('text', 'Second')]),
       ]),
-    ])
+    ]),
   );
 });
 
@@ -275,7 +275,7 @@ it('skips non-numeric footnotes when the option is set', async () => {
       build('footnoteDefinition', { identifier: '1', label: '1' }, [
         build('paragraph', [build('text', 'Second')]),
       ]),
-    ])
+    ]),
   );
 });
 

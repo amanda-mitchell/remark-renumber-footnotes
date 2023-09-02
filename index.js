@@ -41,7 +41,7 @@ function applyNewIdentifiers(node, remappedIdentifiers) {
   return {
     ...node,
     children: node.children.map(child =>
-      applyNewIdentifiers(child, remappedIdentifiers)
+      applyNewIdentifiers(child, remappedIdentifiers),
     ),
   };
 }
@@ -84,7 +84,7 @@ export function renumberFootnotes(options) {
       node =>
         isFootnoteDefinition(node) &&
         !remappedIdentifiers[node.identifier] &&
-        (!ignoreNonnumericFootnotes || isNumeric(node.identifier))
+        (!ignoreNonnumericFootnotes || isNumeric(node.identifier)),
     );
 
     for (const node of orphanedDefinitions) {

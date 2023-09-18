@@ -24,7 +24,7 @@
     "jest": "^29.0.0",
     "remark-footnotes": "^4.0.1",
     "remark-html": "^15.0.1",
-    "remark-parse": "^10.0.1",
+    "remark-parse": "^11.0.0",
     "unified": "^11.0.2",
     "unist-builder": "^4.0.0"
   },

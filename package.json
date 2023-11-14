@@ -20,7 +20,7 @@
   ],
   "type": "module",
   "devDependencies": {
-    "@amanda-mitchell/node-project-scripts": "4.30.0",
+    "@amanda-mitchell/node-project-scripts": "4.33.0",
     "jest": "^29.0.0",
     "remark-footnotes": "^4.0.1",
     "remark-html": "^15.0.1",

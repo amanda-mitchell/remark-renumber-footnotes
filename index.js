@@ -1,51 +1,5 @@
 import { convert } from 'unist-util-is';
 
-const isFootnoteReference = convert('footnoteReference');
-const isFootnoteDefinition = convert('footnoteDefinition');
-const isFootnote = convert('footnote');
-
-function findFootnoteNodes(node) {
-  if (
-    isFootnote(node) ||
-    isFootnoteReference(node) ||
-    isFootnoteDefinition(node)
-  ) {
-    return [node];
-  }
-
-  if (!node.children) {
-    return [];
-  }
-
-  return node.children.flatMap(findFootnoteNodes);
-}
-
-function isNumeric(text) {
-  return /^\d+$/.test(text);
-}
-
-function applyNewIdentifiers(node, remappedIdentifiers) {
-  if (isFootnoteReference(node) || isFootnoteDefinition(node)) {
-    const identifier = remappedIdentifiers[node.identifier];
-    if (!identifier) {
-      return node;
-    }
-
-    return { ...node, identifier, label: identifier };
-  }
-
-  if (!node.children) {
-    return node;
-  }
-
-  return {
-    ...node,
-    children: node.children.map(child =>
-      applyNewIdentifiers(child, remappedIdentifiers),
-    ),
-  };
-}
-
 export function renumberFootnotes(options) {
   const { ignoreNonnumericFootnotes } = options || {
     ignoreNonnumericFootnotes: false,
@@ -98,3 +52,49 @@ export function renumberFootnotes(options) {
     return applyNewIdentifiers(tree, remappedIdentifiers);
   };
 }
+
+function findFootnoteNodes(node) {
+  if (
+    isFootnote(node) ||
+    isFootnoteReference(node) ||
+    isFootnoteDefinition(node)
+  ) {
+    return [node];
+  }
+
+  if (!node.children) {
+    return [];
+  }
+
+  return node.children.flatMap(findFootnoteNodes);
+}
+
+function isNumeric(text) {
+  return /^\d+$/.test(text);
+}
+
+function applyNewIdentifiers(node, remappedIdentifiers) {
+  if (isFootnoteReference(node) || isFootnoteDefinition(node)) {
+    const identifier = remappedIdentifiers[node.identifier];
+    if (!identifier) {
+      return node;
+    }
+
+    return { ...node, identifier, label: identifier };
+  }
+
+  if (!node.children) {
+    return node;
+  }
+
+  return {
+    ...node,
+    children: node.children.map(child =>
+      applyNewIdentifiers(child, remappedIdentifiers),
+    ),
+  };
+}
+
+const isFootnoteReference = convert('footnoteReference');
+const isFootnoteDefinition = convert('footnoteDefinition');
+const isFootnote = convert('footnote');

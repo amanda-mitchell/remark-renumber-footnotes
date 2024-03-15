@@ -17,6 +17,8 @@ jobs:
         run: yarn prettier --check "./**/*.{js,md,cjs,mjs,jsx,ts,tsx}"
       - name: Lint
         run: yarn eslint "./**/*.{js,jsx,mjs,cjs,ts,tsx}"
+      - name: Typescript compile
+        run: yarn tsc
       - name: Test
         run: yarn jest
         env:

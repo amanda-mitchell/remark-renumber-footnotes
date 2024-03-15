@@ -12,6 +12,8 @@ jobs:
         with:
           node-version: 18
       - run: yarn --frozen-lockfile --ignore-scripts
+      - name: Typescript compile
+        run: yarn tsc
       - run: yarn jest
         env:
           NODE_OPTIONS: --experimental-vm-modules
@@ -27,6 +29,8 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: yarn --frozen-lockfile --ignore-scripts
+      - name: Typescript compile
+        run: yarn tsc
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

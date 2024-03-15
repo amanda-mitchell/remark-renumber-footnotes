@@ -10,12 +10,12 @@ yarn add @amanda-mitchell/remark-renumber-footnotes
 
 ## Use
 
-Construct a unified parser and pass `renumerFooters` to it as a plugin:
+Construct a unified parser and pass `renumberFootnotes` to it as a plugin:
 
 ```js
 const unified = require('unified');
 const markdown = require('remark-parse');
-const footnotes = require('remark-footnotes');
+const remarkGfm = require('remark-gfm');
 const {
   renumberFootnotes,
 } = require('@amanda-mitchell/remark-renumber-footnotes');
@@ -23,7 +23,7 @@ const html = require('remark-html');
 
 const doc = `[^1]: Second
 
-This is a document[^2] with[^2] a couple[^1] of^[inline] footnotes[^foo].
+This is a document[^2] with[^2] a couple[^1] of footnotes[^foo].
 
 [^foo]: Last item
 
@@ -32,7 +32,7 @@ This is a document[^2] with[^2] a couple[^1] of^[inline] footnotes[^foo].
 
 const processor = unified()
 	.use(markdown)
-	.use(footnotes, { inlineNotes: true })
+	.use(remarkGfm)
 	.use(renumberFootnotes)
 	.use(html)
 	.freeze();
@@ -44,16 +44,20 @@ When run, this script will print
 
 <!-- prettier-ignore-start -->
 ```html
-<p>This is a document<sup id="fnref-1"><a href="#fn-1" class="footnote-ref">1</a></sup> with<sup id="fnref-1"><a href="#fn-1" class="footnote-ref">1</a></sup> a couple<sup id="fnref-2"><a href="#fn-2" class="footnote-ref">2</a></sup> of<sup id="fnref-3"><a href="#fn-3" class="footnote-ref">3</a></sup> footnotes<sup id="fnref-4"><a href="#fn-4" class="footnote-ref">4</a></sup>.</p>
-<div class="footnotes">
-<hr>
+<p>This is a document<sup><a href="#user-content-fn-1" id="user-content-user-content-fnref-1" data-footnote-ref aria-describedby="user-content-footnote-label">1</a></sup> with<sup><a href="#user-content-fn-1" id="user-content-user-content-fnref-1-2" data-footnote-ref aria-describedby="user-content-footnote-label">1</a></sup> a couple<sup><a href="#user-content-fn-2" id="user-content-user-content-fnref-2" data-footnote-ref aria-describedby="user-content-footnote-label">2</a></sup> of footnotes<sup><a href="#user-content-fn-3" id="user-content-user-content-fnref-3" data-footnote-ref aria-describedby="user-content-footnote-label">3</a></sup>.</p>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="user-content-footnote-label">Footnotes</h2>
 <ol>
-<li id="fn-1">First<a href="#fnref-1" class="footnote-backref">↩</a></li>
-<li id="fn-2">Second<a href="#fnref-2" class="footnote-backref">↩</a></li>
-<li id="fn-3">inline<a href="#fnref-3" class="footnote-backref">↩</a></li>
-<li id="fn-4">Last item<a href="#fnref-4" class="footnote-backref">↩</a></li>
+<li id="user-content-user-content-fn-1">
+<p>First <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-1-2" data-footnote-backref="" aria-label="Back to reference 1-2" class="data-footnote-backref">↩<sup>2</sup></a></p>
+</li>
+<li id="user-content-user-content-fn-2">
+<p>Second <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-user-content-fn-3">
+<p>Last item <a href="#user-content-fnref-3" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
 </ol>
-</div>
+</section>
 ```
 <!-- prettier-ignore-end -->
 

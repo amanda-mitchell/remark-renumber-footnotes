@@ -299,21 +299,19 @@ This is a document[^2] with[^2] a couple[^1] of^[inline] footnotes[^foo].
   const { value } = await processor.process(doc);
 
   expect(value)
-    .toEqual(`<p>This is a document<sup><a href="#user-content-fn-1" id="user-content-user-content-fnref-1" aria-describedby="footnote-label">1</a></sup> with<sup><a href="#user-content-fn-1" id="user-content-user-content-fnref-1-2" aria-describedby="footnote-label">1</a></sup> a couple<sup><a href="#user-content-fn-2" id="user-content-user-content-fnref-2" aria-describedby="footnote-label">2</a></sup> of<sup><a href="#user-content-fn-3" id="user-content-user-content-fnref-3" aria-describedby="footnote-label">3</a></sup> footnotes<sup><a href="#user-content-fn-4" id="user-content-user-content-fnref-4" aria-describedby="footnote-label">4</a></sup>.</p>
-<h2 id="user-content-footnote-label">Footnotes</h2>
+    .toEqual(`<p>This is a document<sup><a href="#user-content-fn-1" id="user-content-user-content-fnref-1" data-footnote-ref aria-describedby="user-content-footnote-label">1</a></sup> with<sup><a href="#user-content-fn-1" id="user-content-user-content-fnref-1-2" data-footnote-ref aria-describedby="user-content-footnote-label">1</a></sup> a couple<sup><a href="#user-content-fn-2" id="user-content-user-content-fnref-2" data-footnote-ref aria-describedby="user-content-footnote-label">2</a></sup> of<div>inline</div> footnotes<sup><a href="#user-content-fn-4" id="user-content-user-content-fnref-4" data-footnote-ref aria-describedby="user-content-footnote-label">3</a></sup>.</p>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="user-content-footnote-label">Footnotes</h2>
 <ol>
 <li id="user-content-user-content-fn-1">
-<p>First <a href="#user-content-fnref-1" aria-label="Back to content">↩</a> <a href="#user-content-fnref-1-2" aria-label="Back to content">↩<sup>2</sup></a></p>
+<p>First <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-1-2" data-footnote-backref="" aria-label="Back to reference 1-2" class="data-footnote-backref">↩<sup>2</sup></a></p>
 </li>
 <li id="user-content-user-content-fn-2">
-<p>Second <a href="#user-content-fnref-2" aria-label="Back to content">↩</a></p>
-</li>
-<li id="user-content-user-content-fn-3">
-<p>inline <a href="#user-content-fnref-3" aria-label="Back to content">↩</a></p>
+<p>Second <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
 </li>
 <li id="user-content-user-content-fn-4">
-<p>Last item <a href="#user-content-fnref-4" aria-label="Back to content">↩</a></p>
+<p>Last item <a href="#user-content-fnref-4" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
 </li>
 </ol>
+</section>
 `);
 });

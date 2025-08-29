@@ -28,7 +28,7 @@
   ],
   "types": "dist/index.d.ts",
   "devDependencies": {
-    "@amanda-mitchell/node-project-scripts": "4.166.0",
+    "@amanda-mitchell/node-project-scripts": "4.190.0",
     "@types/unist": "^3.0.2",
     "jest": "^29.0.0",
     "mdast": "^3.0.0",
